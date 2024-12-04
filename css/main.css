@@ -1,0 +1,63 @@
+/* Universal CSS */
+body {
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+}
+
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --primary-active: #004085;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --border-radius: 5px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.layout {
+    display: flex;
+    width: 100%;
+}
+/* Sidebar */
+.sidebar {
+    background: #f8f9fa;
+    padding: 1rem;
+    width: 250px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.component-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+}
+
+.component-link:hover {
+    background: #0056b3;
+}
+
+/* Content Area */
+#content-area {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Hidden Class */
+#content-area .hidden {
+    display: none;
+}
