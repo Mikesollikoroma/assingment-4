@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best ever Design System</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/alert.css">
+    <link rel="stylesheet" href="./css/tooltip.css">
+    <link rel="stylesheet" href="./css/toast.css">
+    <link rel="stylesheet" href="/css/mediaqueries.css">
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Hovedmeny</h2>
+            <ul>
+                <li><button class="component-link" data-target="button-section">Buttons</button></li>
+                <li><button class="component-link" data-target="card-section">Cards</button></li>
+                <li><button class="component-link" data-target="modal-section">Modals</button></li>
+                <li><button class="component-link" data-target="dropdown-section">Dropdowns</button></li>
+                <li><button class="component-link" data-target="navbar-section">Navigation Bar</button></li>
+                <li><button class="component-link" data-target="alert-section">Alerts</button></li>
+                <li><button class="component-link" data-target="tooltip-section">Tooltips</button></li>
+                <li><button class="component-link" data-target="toast-section">Toasts</button></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div id="content-area">
+
+            <!-- Button Section -->
+            <div id="button-section" class="component-section hidden">
+                <button class="btn default-btn">Default Button</button>
+                <button class="btn hover-btn">Hover Me</button>
+                <button class="btn active-btn" onclick="buttonClick()">Click Me</button>
+                <button class="btn disabled-btn" disabled>Disabled Button</button>
+            </div>
+
+            <!-- Card section -->
+            <div id="card-section" class="component-section hidden">
+                <div class="card default-card">
+                    <h3 class="card-title">Default Card</h3>
+                    <p class="card-content">This is a standard card with no extra actions applied.</p>
+                </div>
+            
+                <div class="card hover-card">
+                    <h3 class="card-title">Hover Card</h3>
+                    <p class="card-content">Hover over this card to see the hover effect.</p>
+                </div>
+            
+                <div class="card clickable-card" onclick="cardClick()">
+                    <h3 class="card-title">Clickable Card</h3>
+                    <p class="card-content">Click this card to trigger an action!</p>
+                </div>
+            </div>
+
+            <!-- Modal section -->
+            <div id="modal-section" class="component-section hidden">
+                <!-- Button to open the enabled modal -->
+                <button class="btn open-modal-btn" onclick="openModal()">Open Modal</button>
+            
+                <!-- Button for disabled modal state -->
+                <button class="btn open-modal-btn disabled-btn" disabled>Disabled Modal</button>
+            
+                <!-- Modal structure -->
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <h2>Modal Title</h2>
+                        <p>This is an active modal window. Click the "X" or outside the modal to close it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown section -->
+            <div id="dropdown-section" class="component-section hidden">
+                <!-- Enabled Dropdown -->
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">Select an Option</button>
+                    <ul id="dropdown-menu" class="dropdown-menu">
+                        <li class="dropdown-item">Option 1</li>
+                        <li class="dropdown-item">Option 2</li>
+                        <li class="dropdown-item">Option 3</li>
+                    </ul>
+                </div>
+            
+                <!-- Disabled Dropdown -->
+                <div class="dropdown disabled-dropdown">
+                    <button class="dropdown-btn disabled-btn" disabled>Dropdown Disabled</button>
+                </div>
+            </div>   
+            <!-- Navbar Section -->
+            <div id="navbar-section" class="component-section hidden">
+                <nav class="navbar">
+                    <div class="navbar-brand">
+                        <a href="#" class="navbar-logo">MyLogo</a>
+                        <button id="navbar-toggle" class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+                    </div>
+                    <ul id="navbar-menu" class="navbar-menu">
+                        <li><a href="#home" class="navbar-link">Home</a></li>
+                        <li><a href="#about" class="navbar-link">About</a></li>
+                        <li><a href="#services" class="navbar-link">Services</a></li>
+                        <li><a href="#contact" class="navbar-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Alert Section -->
+            <div id="alert-section" class="component-section hidden">
+                <!-- Example Alerts -->
+                <div class="alert alert-success">
+                    <span>Success! Your action was completed successfully.</span>
+                    <button class="alert-close" onclick="closeAlert(this)">✖</button>
+                </div>
+                <div class="alert alert-warning">
+                    <span>Warning! Please check the entered data.</span>
+                    <button class="alert-close" onclick="closeAlert(this)">✖</button>
+                </div>
+                <div class="alert alert-error">
+                    <span>Error! Something went wrong. Try again later.</span>
+                    <button class="alert-close" onclick="closeAlert(this)">✖</button>
+                </div>
+                <div class="alert alert-info">
+                    <span>Info! You have new updates available.</span>
+                    <button class="alert-close" onclick="closeAlert(this)">✖</button>
+                </div>
+            </div>
+            <!-- Tooltip Section -->
+            <div id="tooltip-section" class="component-section hidden">
+                <button class="tooltip-target" data-tooltip="This is a tooltip on top!" data-position="top">
+                    Hover over me (Top)
+                </button>
+                <button class="tooltip-target" data-tooltip="This is a tooltip on the bottom!" data-position="bottom" disabled>
+                    Hover over me (Bottom)
+                </button>
+                <button class="tooltip-target" data-tooltip="This is a tooltip on the left!" data-position="left">
+                    Hover over me (Left)
+                </button>
+                <button class="tooltip-target" data-tooltip="This is a tooltip on the right!" data-position="right">
+                    Hover over me (Right)
+                </button>
+            </div>
+
+            <!-- Toast Section -->
+            <div id="toast-section" class="component-section hidden">
+                <div id="toast-messages" class="toast-messages"></div>
+                <div class="button-group">
+                    <button id="show-toast-success" class="btn">Show Success Toast</button>
+                    <button id="show-toast-error" class="btn">Show Error Toast</button>
+                    <button id="show-toast-info" class="btn">Show Info Toast</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
