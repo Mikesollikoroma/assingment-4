@@ -1,0 +1,68 @@
+/* General styles for the dropdown component */
+.dropdown-component {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Dropdown button styling */
+.dropdown-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Disabled button styling */
+.disabled-btn {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    display: none; /* Hidden by default */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Disabled dropdown styling */
+.disabled-dropdown .dropdown-btn {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
