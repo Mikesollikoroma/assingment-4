@@ -4,3 +4,32 @@
         width: 80%;
     }
 }
+
+/* Responsiv design for navbar */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; 
+    }
+
+    .navbar-menu {
+        display: none; 
+        flex-direction: column;
+        gap: 10px;
+        background: #0056b3; 
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .navbar-menu.open {
+        display: flex;
+    }
+
+    .navbar-link {
+        text-align: center;
+    }
+}
