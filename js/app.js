@@ -21,5 +21,27 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Button Clicked!");
         });
     }
+    // Modal Component: Open and close handlers
+    const openModalButton = document.querySelector(".open-modal-btn");
+    const closeModalButton = document.querySelector(".close-btn");
+    const modal = document.getElementById("modal");
 
+    if (openModalButton && modal) {
+        openModalButton.addEventListener("click", () => {
+            modal.style.display = "flex";
+        });
+    }
+
+    if (closeModalButton && modal) {
+        closeModalButton.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+    }
+
+    // Close modal when clicking outside the content
+    if (modal) {
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) modal.style.display = "none";
+        });
+    }
 });
