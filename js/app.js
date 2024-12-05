@@ -83,5 +83,47 @@ document.addEventListener("DOMContentLoaded", () => {
         target.addEventListener("mouseleave", () => (tooltip.style.opacity = 0));
     });
 
-    
+    // Toast Component: Show and hide toast messages
+    const toastContainer = document.getElementById("toast-messages");
+
+    function showToast(message, type) {
+        const toast = document.createElement("div");
+        toast.className = `toast toast-${type}`;
+        toast.innerHTML = `
+            <span>${message}</span>
+            <button class="toast-close">&times;</button>
+        `;
+
+        // Add close functionality
+        toast.querySelector(".toast-close").addEventListener("click", () => {
+            toast.remove();
+        });
+
+        // Auto-remove toast after 5 seconds
+        setTimeout(() => toast.remove(), 5000);
+
+        toastContainer.appendChild(toast);
+    }
+
+    document.getElementById("show-toast-success")?.addEventListener("click", () => {
+        showToast("Dette er en suksessmelding!", "success");
+    });
+
+    document.getElementById("show-toast-error")?.addEventListener("click", () => {
+        showToast("Dette er en feilmelding!", "error");
+    });
+
+    document.getElementById("show-toast-info")?.addEventListener("click", () => {
+        showToast("Dette er en informasjonsmelding!", "info");
+    });
+
+    // Navbar Component: Toggle navbar menu (mobile)
+    const navbarToggle = document.getElementById("navbar-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    if (navbarToggle && navbarMenu) {
+        navbarToggle.addEventListener("click", () => {
+            navbarMenu.classList.toggle("open");
+        });
+    }
 });
