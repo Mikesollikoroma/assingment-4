@@ -1,0 +1,131 @@
+/* Tooltip Container */
+.tooltip-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    position: relative;
+}
+/* Tooltip Target Button */
+.tooltip-target {
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tooltip-target:hover {
+    background-color: #0056b3;
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+
+/* Tooltip Arrow */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+
+/* Tooltip Positions */
+.tooltip-top {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+}
+
+.tooltip-top::after {
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+    transform: translateX(-50%);
+}
+
+.tooltip-bottom {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+}
+
+.tooltip-bottom::after {
+    bottom: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    transform: translateX(-50%);
+}
+
+.tooltip-left {
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 8px;
+}
+
+.tooltip-left::after {
+    right: -5px;
+    top: 50%;
+    border-width: 5px;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%);
+}
+
+.tooltip-right {
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.tooltip-right::after {
+    left: -5px;
+    top: 50%;
+    border-width: 5px;
+    border-color: transparent rgba(0, 0, 0, 0.8) transparent transparent;
+    transform: translateY(-50%);
+}
+
+/* Disabled tooltip styling */
+.disabled-tooltip  {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+/* Tooltip disabled Button */
+.disabled-tooltip-btn {
+    position: relative;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: not-allowed;
+    font-size: 16px;
+}
