@@ -106,15 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.getElementById("show-toast-success")?.addEventListener("click", () => {
-        showToast("Dette er en suksessmelding!", "success");
+        showToast("This is a success toast!", "success");
     });
 
     document.getElementById("show-toast-error")?.addEventListener("click", () => {
-        showToast("Dette er en feilmelding!", "error");
+        showToast("This is a error toast!", "error");
     });
 
     document.getElementById("show-toast-info")?.addEventListener("click", () => {
-        showToast("Dette er en informasjonsmelding!", "info");
+        showToast("This is a info toast!", "info");
     });
 
     // Navbar Component: Toggle navbar menu (mobile)
