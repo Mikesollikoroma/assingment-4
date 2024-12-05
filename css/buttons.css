@@ -46,8 +46,8 @@
 }
 
 /* Disabled Button */
-.disabled-btn {
-    background-color: #cccccc;
+#disabled-btn {
+    background-color: #cccc;
     color: white;
     cursor: not-allowed;
 }
