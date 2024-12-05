@@ -44,4 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target === modal) modal.style.display = "none";
         });
     }
+    
+    // Dropdown Component: Toggle visibility
+    const dropdownButton = document.querySelector(".dropdown-btn");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+
+    if (dropdownButton && dropdownMenu) {
+        dropdownButton.addEventListener("click", () => {
+            dropdownMenu.classList.toggle("open");
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener("click", (event) => {
+            if (event.target !== dropdownMenu && event.target !== dropdownButton) {
+                dropdownMenu.classList.remove("open");
+            }
+        });
+    }
 });
