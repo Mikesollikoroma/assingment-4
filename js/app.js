@@ -71,5 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+     // Tooltip Component: Initialize tooltips
+     document.querySelectorAll(".tooltip-target").forEach((target) => {
+        const tooltip = document.createElement("div");
+        tooltip.className = `tooltip tooltip-${target.dataset.position}`;
+        tooltip.textContent = target.dataset.tooltip;
+        target.appendChild(tooltip);
+
+        // Show/hide tooltip on hover
+        target.addEventListener("mouseenter", () => (tooltip.style.opacity = 1));
+        target.addEventListener("mouseleave", () => (tooltip.style.opacity = 0));
+    });
+
     
 });
