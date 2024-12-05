@@ -56,7 +56,7 @@
     background-color: #0056b3;
 }
 /* Disabled button styling */
-.disabled-btn {
+#disabled-modal-btn {
     background-color: #cccccc;
     color: #666666;
     cursor: not-allowed;
