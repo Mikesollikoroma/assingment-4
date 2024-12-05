@@ -26,6 +26,10 @@
     color: #ffdd57;
 }
 
+.navbar-logo:active{
+    transform: scale(0.8);
+}
+
 /* Toggle-button */
 .navbar-toggle {
     display: none;
