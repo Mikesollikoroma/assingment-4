@@ -1,0 +1,52 @@
+/* Alert Container */
+.alert-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* General Alert Styles */
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Alert Types */
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.alert-error {
+    background-color: #dc3545;
+}
+
+.alert-info {
+    background-color: #17a2b8;
+}
+
+/* Close Button */
+.alert-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: inherit;
+    cursor: pointer;
+}
+
+.alert-close:hover {
+    opacity: 0.7;
+}
