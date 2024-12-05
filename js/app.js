@@ -61,4 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // Alert Component: Close alerts
+    document.querySelectorAll(".alert-close").forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const alert = event.target.parentElement;
+            alert.style.opacity = 0; // Smooth fade-out
+            setTimeout(() => alert.remove(), 300); // Remove after fade-out
+        });
+    });
+
+    
 });
