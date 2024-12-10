@@ -5,7 +5,7 @@ This assigment is based on the criteria and contains 8 reusable components.
  
 ## Links 
 - Github: https://github.com/Mikesollikoroma/assingment-4.git
-- Netlify: 
+- Netlify: https://assingment-4-hoyskolenkristiania.netlify.app
 
  ### Navigation 
  - Sidebar 
